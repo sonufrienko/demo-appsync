@@ -1,0 +1,23 @@
+{
+	"function": {
+		"listCountriesDemo": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		},
+		"listCitiesDemo": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	},
+	"api": {
+		"demoappsync": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY"
+			}
+		}
+	}
+}

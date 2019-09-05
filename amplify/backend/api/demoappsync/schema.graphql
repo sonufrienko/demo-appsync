@@ -1,0 +1,19 @@
+type Country {
+	countryID: ID!
+	countryName: String
+	language: String
+	cities: [City]
+}
+
+type City {
+	cityID: ID!
+	cityName: String
+}
+
+input CountriesFilterInput {
+  countryID: String
+}
+
+type Query {
+	countries(filter: CountriesFilterInput): [Country] @function(name: "listCountriesDemo-${env}")
+}
